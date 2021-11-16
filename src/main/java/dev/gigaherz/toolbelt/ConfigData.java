@@ -54,7 +54,7 @@ public class ConfigData
     private static Set<ItemStack> whiteList = Sets.newHashSet();
 
     public static boolean showBeltOnPlayers = true;
-    public static float beltItemScale = 0.5f;
+    public static float beltItemScale = 1f;
 
     public static boolean releaseToSwap = false;
     public static boolean clipMouseToCircle = true;
@@ -153,7 +153,7 @@ public class ConfigData
             beltItemScale = builder
                     .comment("Changes the scale of items on the belt.")
                     .translation("text.toolbelt.config.belt_item_scale")
-                    .defineInRange("beltItemScale", 0.5, 0.1, 2.0);
+                    .defineInRange("beltItemScale", 1, 0.1, 2.0);
             builder.pop();
             builder.comment("Options for customizing the radial menu")
                     .push("menu");
